@@ -10,9 +10,9 @@ var firebaseConfig = {
     messagingSenderId: "1030496941679",
     appId: "1:1030496941679:web:b220832ce6b30d8eb33f9a"
   };
-
+  // connect app to firebase services 
   firebase.initializeApp(firebaseConfig);
-
+  // creates objects for storage and database to export to different files as needed 
   const projectStorage = firebase.storage();
   const projectFirestore = firebase.firestore();
   const timeStamp = firebase.firestore.FieldValue.serverTimestamp;
