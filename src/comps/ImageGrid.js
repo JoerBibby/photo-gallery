@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 const ImageGrid = ( {setSelectedImg} ) => {
     // docs representing uploaded images retrieved using custom hook 
     const { docs } = useFirestore("images");
+
+    
     
 
     return (
@@ -14,6 +16,7 @@ const ImageGrid = ( {setSelectedImg} ) => {
                 <motion.div className="img-wrap" key={doc.id}
                 layout
                 whileHover={{opacity: 1}}
+                style={{cursor: "pointer"}}
                 // when images is clicked set as state in parent App component so that Modal can access and display it 
                 onClick={() => {
                     setSelectedImg(doc.url)
